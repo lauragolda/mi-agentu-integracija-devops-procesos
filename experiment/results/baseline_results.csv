@@ -1,0 +1,141 @@
+experiment,scenario_id,run_id,layer,baseline_decision,mi_decision,baseline_correct,mi_correct,baseline_reason,error_delta,latency_delta_pct,canary_error_rate,stable_error_rate,canary_latency_ms,stable_latency_ms,tests_failed,baseline_time_s,mi_time_s
+E1_baseline,S1,1,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,-0.0362,0.0,0.0,71.9,74.6,0,8e-06,12.6479
+E1_baseline,S1,2,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,-0.0131,0.0,0.0,67.6,68.5,0,5e-06,10.1957
+E1_baseline,S1,3,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,0.0,0.0,0.0,70.4,70.4,0,3e-06,9.6813
+E1_baseline,S1,4,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,0.015,0.0,0.0,67.8,66.8,0,3e-06,9.0238
+E1_baseline,S1,5,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,0.0236,0.0,0.0,69.3,67.7,0,1e-06,9.1862
+E1_baseline,S1,6,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,0.0041,0.0,0.0,72.9,72.6,0,1e-06,9.5154
+E1_baseline,S1,7,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,0.0059,0.0,0.0,68.0,67.6,0,2e-06,9.2055
+E1_baseline,S1,8,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,0.0184,0.0,0.0,66.5,65.3,0,1e-06,9.4122
+E1_baseline,S1,9,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,-0.0087,0.0,0.0,68.6,69.2,0,3e-06,9.2673
+E1_baseline,S1,10,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,0.005,0.0,0.0,60.5,60.2,0,3e-06,9.2679
+E1_baseline,S2,1,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.0016,0.0,0.0,62.4,62.5,4,4e-06,10.4138
+E1_baseline,S2,2,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,0.0,0.0,0.0,64.4,64.4,4,3e-06,10.8639
+E1_baseline,S2,3,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,0.0414,0.0,0.0,62.9,60.4,4,2e-06,10.3869
+E1_baseline,S2,4,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,0.0,0.0,0.0,61.5,61.5,4,3e-06,9.7162
+E1_baseline,S2,5,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.057,0.0,0.0,64.5,68.4,4,2e-06,9.8394
+E1_baseline,S2,6,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.0327,0.0,0.0,65.1,67.3,4,1e-06,9.6745
+E1_baseline,S2,7,delivery,BLOCK,DEPLOY,True,False,GitHub Actions statuss nav success: failure,0.0,0.0375,0.0,0.0,66.4,64.0,4,1e-06,8.914
+E1_baseline,S2,8,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.0199,0.0,0.0,63.9,65.2,4,1e-06,9.8144
+E1_baseline,S2,9,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.0099,0.0,0.0,59.9,60.5,4,1e-06,9.7841
+E1_baseline,S2,10,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,0.0,0.0,0.0,61.2,61.2,4,3e-06,9.8152
+E1_baseline,S3,1,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 2% pieļaujamās robežās,0.0,0.023,0.0,0.0,66.8,65.3,0,6e-06,9.8032
+E1_baseline,S3,2,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums -0% pieļaujamās robežās,0.0,-0.003,0.0,0.0,66.4,66.6,0,8e-06,10.1418
+E1_baseline,S3,3,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 0% pieļaujamās robežās,0.0,0.0047,0.0,0.0,63.6,63.3,0,3e-06,9.9428
+E1_baseline,S3,4,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums -5% pieļaujamās robežās,0.0,-0.046,0.0,0.0,60.1,63.0,0,2e-06,10.4745
+E1_baseline,S3,5,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums -2% pieļaujamās robežās,0.0,-0.0245,0.0,0.0,63.6,65.2,0,2e-06,10.0195
+E1_baseline,S3,6,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums -1% pieļaujamās robežās,0.0,-0.0064,0.0,0.0,62.3,62.7,0,2e-06,10.337
+E1_baseline,S3,7,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 3% pieļaujamās robežās,0.0,0.0257,0.0,0.0,59.8,58.3,0,5e-06,9.5058
+E1_baseline,S3,8,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 3% pieļaujamās robežās,0.0,0.032,0.0,0.0,61.2,59.3,0,4e-06,9.8632
+E1_baseline,S3,9,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums -1% pieļaujamās robežās,0.0,-0.0144,0.0,0.0,61.4,62.3,0,2e-06,10.2342
+E1_baseline,S3,10,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 6% pieļaujamās robežās,0.0,0.0628,0.0,0.0,62.6,58.9,0,2e-06,10.3735
+E1_baseline,S4,1,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 7737% > robeža 50%,1.0,77.3699,1.0,0.0,5000.0,63.8,4,8e-06,9.1812
+E1_baseline,S4,2,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 7978% > robeža 50%,1.0,79.7754,1.0,0.0,5000.0,61.9,4,8e-06,9.1562
+E1_baseline,S4,3,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 7762% > robeža 50%,1.0,77.6164,1.0,0.0,5000.0,63.6,4,4e-06,9.3729
+E1_baseline,S4,4,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 7178% > robeža 50%,1.0,71.7802,1.0,0.0,5000.0,68.7,4,4e-06,9.388
+E1_baseline,S4,5,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 7616% > robeža 50%,1.0,76.1605,1.0,0.0,5000.0,64.8,4,2e-06,9.5209
+E1_baseline,S4,6,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 7002% > robeža 50%,1.0,70.0227,1.0,0.0,5000.0,70.4,4,3e-06,8.764
+E1_baseline,S4,7,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 6922% > robeža 50%,1.0,69.2247,1.0,0.0,5000.0,71.2,4,6e-06,8.7068
+E1_baseline,S4,8,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 7628% > robeža 50%,1.0,76.2798,1.0,0.0,5000.0,64.7,4,5e-06,8.9578
+E1_baseline,S4,9,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 6731% > robeža 50%,1.0,67.306,1.0,0.0,5000.0,73.2,4,1e-05,9.0563
+E1_baseline,S4,10,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 6620% > robeža 50%,1.0,66.2043,1.0,0.0,5000.0,74.4,4,6e-06,8.678
+E1_baseline,S5,1,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,0.0122,0.0,0.0,74.4,73.5,0,4e-06,4.5096
+E1_baseline,S5,2,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0339,0.0,0.0,68.4,70.8,0,3e-06,4.8408
+E1_baseline,S5,3,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,0.0471,0.0,0.0,68.9,65.8,0,1e-06,4.6408
+E1_baseline,S5,4,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,0.0389,0.0,0.0,64.1,61.7,0,4e-06,5.0352
+E1_baseline,S5,5,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0339,0.0,0.0,71.2,73.7,0,2e-06,4.75
+E1_baseline,S5,6,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,0.0188,0.0,0.0,65.2,64.0,0,2e-06,5.2772
+E1_baseline,S5,7,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0095,0.0,0.0,62.6,63.2,0,3e-06,5.3128
+E1_baseline,S5,8,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0212,0.0,0.0,69.4,70.9,0,2e-06,5.3048
+E1_baseline,S5,9,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0131,0.0,0.0,75.2,76.2,0,4e-06,5.29
+E1_baseline,S5,10,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0031,0.0,0.0,64.7,64.9,0,2e-06,5.3765
+E1_baseline,S6,1,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,71.8863,1.0,0.0,5000.0,68.6,4,6e-06,13.7825
+E1_baseline,S6,2,monitoring,ROLLBACK,INVESTIGATE,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,77.125,1.0,0.0,5000.0,64.0,4,6e-06,12.0335
+E1_baseline,S6,3,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,65.2252,1.0,0.0,5000.0,75.5,4,3e-06,12.1382
+E1_baseline,S6,4,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,67.6813,1.0,0.0,5000.0,72.8,4,5e-06,12.1273
+E1_baseline,S6,5,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,65.4894,1.0,0.0,5000.0,75.2,4,5e-06,12.0161
+E1_baseline,S6,6,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,74.0751,1.0,0.0,5000.0,66.6,4,3e-06,11.5783
+E1_baseline,S6,7,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,76.8816,1.0,0.0,5000.0,64.2,4,5e-06,12.2145
+E1_baseline,S6,8,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,65.0502,1.0,0.0,5000.0,75.7,4,5e-06,11.8134
+E1_baseline,S6,9,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,73.0741,1.0,0.0,5000.0,67.5,4,2e-06,12.674
+E1_baseline,S6,10,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,79.0,1.0,0.0,5000.0,62.5,4,5e-06,12.0044
+E1_baseline,S7,1,deployment,CONTINUE,CONTINUE,False,False,Kļūdu delta 4.0% un latentums 2% pieļaujamās robežās,0.04,0.019,0.04,0.0,75.1,73.7,0,5e-06,9.0034
+E1_baseline,S7,2,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 10.0% > robeža 5%,0.1,0.0688,0.1,0.0,68.4,64.0,0,3e-06,9.128
+E1_baseline,S7,3,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 20.0% > robeža 5%,0.2,-0.0312,0.2,0.0,62.0,64.0,0,2e-06,9.7808
+E1_baseline,S7,4,deployment,CONTINUE,CONTINUE,False,False,Kļūdu delta 2.0% un latentums 1% pieļaujamās robežās,0.02,0.0067,0.02,0.0,75.2,74.7,0,2e-06,9.5413
+E1_baseline,S7,5,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 6.0% > robeža 5%,0.06,0.1487,0.06,0.0,72.6,63.2,0,4e-06,9.9732
+E1_baseline,S7,6,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 8.0% > robeža 5%,0.08,0.1234,0.08,0.0,71.9,64.0,0,2e-06,10.4003
+E1_baseline,S7,7,deployment,CONTINUE,CONTINUE,False,False,Kļūdu delta 0.0% un latentums 6% pieļaujamās robežās,0.0,0.0622,0.0,0.0,76.8,72.3,0,3e-06,9.8063
+E1_baseline,S7,8,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 6.0% > robeža 5%,0.06,0.0388,0.06,0.0,72.3,69.6,0,2e-06,10.0748
+E1_baseline,S7,9,deployment,CONTINUE,CONTINUE,False,False,Kļūdu delta 2.0% un latentums 6% pieļaujamās robežās,0.02,0.0555,0.02,0.0,76.1,72.1,0,2e-06,10.5904
+E1_baseline,S7,10,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 10.0% > robeža 5%,0.1,0.0668,0.1,0.0,70.3,65.9,0,2e-06,9.966
+E2_baseline,S1,1,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,-0.0278,0.0,0.0,63.0,64.8,0,6e-06,8.4866
+E2_baseline,S1,2,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,0.0402,0.0,0.0,64.7,62.2,0,2e-06,9.0553
+E2_baseline,S1,3,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,-0.0254,0.0,0.0,65.2,66.9,0,4e-06,9.2347
+E2_baseline,S1,4,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,0.0,0.0,0.0,68.1,68.1,0,2e-06,9.3599
+E2_baseline,S1,5,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,-0.0324,0.0,0.0,65.7,67.9,0,3e-06,10.0549
+E2_baseline,S1,6,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,0.0192,0.0,0.0,69.1,67.8,0,3e-06,10.106
+E2_baseline,S1,7,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,-0.0144,0.0,0.0,68.5,69.5,0,2e-06,9.6732
+E2_baseline,S1,8,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,-0.0188,0.0,0.0,62.8,64.0,0,4e-06,11.3489
+E2_baseline,S1,9,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,-0.0048,0.0,0.0,62.6,62.9,0,3e-06,9.8074
+E2_baseline,S1,10,delivery,DEPLOY,DEPLOY,True,True,Visi testi izturēti (12/12),0.0,-0.025,0.0,0.0,62.3,63.9,0,3e-06,10.3499
+E2_baseline,S2,1,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.0249,0.0,0.0,62.7,64.3,6,1.3e-05,10.2178
+E2_baseline,S2,2,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.0016,0.0,0.0,64.0,64.1,6,3e-06,10.0994
+E2_baseline,S2,3,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.0187,0.0,0.0,62.9,64.1,6,3e-06,9.4732
+E2_baseline,S2,4,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.003,0.0,0.0,65.4,65.6,6,1e-06,9.7742
+E2_baseline,S2,5,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.0198,0.0,0.0,64.4,65.7,3,1e-06,9.8386
+E2_baseline,S2,6,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.0144,0.0,0.0,68.6,69.6,8,2e-06,9.6156
+E2_baseline,S2,7,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,0.0359,0.0,0.0,63.4,61.2,5,3e-06,9.9598
+E2_baseline,S2,8,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,0.0339,0.0,0.0,70.1,67.8,7,3e-06,9.858
+E2_baseline,S2,9,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,0.0189,0.0,0.0,70.2,68.9,4,3e-06,10.2382
+E2_baseline,S2,10,delivery,BLOCK,BLOCK,True,True,GitHub Actions statuss nav success: failure,0.0,-0.0194,0.0,0.0,60.7,61.9,5,1e-06,11.2078
+E2_baseline,S3,1,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 1% pieļaujamās robežās,0.0,0.0132,0.0,0.0,68.9,68.0,0,2.2e-05,9.8018
+E2_baseline,S3,2,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 0% pieļaujamās robežās,0.0,0.0,0.0,0.0,64.0,64.0,0,7e-06,9.512
+E2_baseline,S3,3,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums -2% pieļaujamās robežās,0.0,-0.0182,0.0,0.0,64.6,65.8,0,6e-06,10.6422
+E2_baseline,S3,4,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 0% pieļaujamās robežās,0.0,0.0,0.0,0.0,63.7,63.7,0,3e-06,9.5799
+E2_baseline,S3,5,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 0% pieļaujamās robežās,0.0,0.0,0.0,0.0,61.1,61.1,0,6e-06,9.4215
+E2_baseline,S3,6,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums -1% pieļaujamās robežās,0.0,-0.0089,0.0,0.0,67.0,67.6,0,6e-06,10.4049
+E2_baseline,S3,7,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 2% pieļaujamās robežās,0.0,0.022,0.0,0.0,65.0,63.6,0,3e-06,10.6644
+E2_baseline,S3,8,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums -2% pieļaujamās robežās,0.0,-0.0188,0.0,0.0,67.9,69.2,0,5e-06,10.7418
+E2_baseline,S3,9,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums -1% pieļaujamās robežās,0.0,-0.0133,0.0,0.0,66.7,67.6,0,3e-06,9.6715
+E2_baseline,S3,10,deployment,CONTINUE,CONTINUE,True,True,Kļūdu delta 0.0% un latentums 0% pieļaujamās robežās,0.0,0.0015,0.0,0.0,65.7,65.6,0,5e-06,9.8127
+E2_baseline,S4,1,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 6932% > robeža 50%,1.0,69.3235,1.0,0.0,5000.0,71.1,6,1e-05,9.3732
+E2_baseline,S4,2,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 6982% > robeža 50%,1.0,69.8215,1.0,0.0,5000.0,70.6,5,3e-06,11.2897
+E2_baseline,S4,3,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 6932% > robeža 50%,1.0,69.3235,1.0,0.0,5000.0,71.1,7,7e-06,9.7523
+E2_baseline,S4,4,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 6540% > robeža 50%,1.0,65.4011,1.0,0.0,5000.0,75.3,5,5e-06,8.9175
+E2_baseline,S4,5,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 6549% > robeža 50%,1.0,65.4894,1.0,0.0,5000.0,75.2,9,7e-06,10.3481
+E2_baseline,S4,6,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 7652% > robeža 50%,1.0,76.5194,1.0,0.0,5000.0,64.5,9,5e-06,10.7783
+E2_baseline,S4,7,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 6629% > robeža 50%,1.0,66.2948,1.0,0.0,5000.0,74.3,7,7e-06,14.3232
+E2_baseline,S4,8,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 7592% > robeža 50%,1.0,75.9231,1.0,0.0,5000.0,65.0,4,4e-06,14.4938
+E2_baseline,S4,9,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 6778% > robeža 50%,1.0,67.7758,1.0,0.0,5000.0,72.7,5,5e-06,10.8759
+E2_baseline,S4,10,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 100.0% > robeža 5%; Latentuma pieaugums 7862% > robeža 50%,1.0,78.6178,1.0,0.0,5000.0,62.8,8,4e-06,9.9772
+E2_baseline,S5,1,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0199,0.0,0.0,64.1,65.4,0,4e-06,5.6654
+E2_baseline,S5,2,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0239,0.0,0.0,65.3,66.9,0,2e-06,5.5249
+E2_baseline,S5,3,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,0.0142,0.0,0.0,64.5,63.6,0,3e-06,5.8849
+E2_baseline,S5,4,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,0.015,0.0,0.0,67.5,66.5,0,2e-06,5.3331
+E2_baseline,S5,5,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0229,0.0,0.0,64.1,65.6,0,2e-06,5.5466
+E2_baseline,S5,6,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,0.0128,0.0,0.0,71.3,70.4,0,3e-06,5.4417
+E2_baseline,S5,7,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0257,0.0,0.0,60.6,62.2,0,1e-06,5.9285
+E2_baseline,S5,8,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,-0.0061,0.0,0.0,65.5,65.9,0,4e-06,6.6998
+E2_baseline,S5,9,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,0.0756,0.0,0.0,68.3,63.5,0,3e-06,5.542
+E2_baseline,S5,10,monitoring,STABLE,STABLE,True,True,Kļūdu īpatsvars 0.0% pieļaujamās robežās,0.0,0.0,0.0,0.0,62.7,62.7,0,1e-06,5.7074
+E2_baseline,S6,1,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,73.184,1.0,0.0,5000.0,67.4,10,4e-06,12.6646
+E2_baseline,S6,2,monitoring,ROLLBACK,INVESTIGATE,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,79.1282,1.0,0.0,5000.0,62.4,7,3e-06,14.1894
+E2_baseline,S6,3,monitoring,ROLLBACK,INVESTIGATE,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,66.9348,1.0,0.0,5000.0,73.6,7,2e-06,15.1809
+E2_baseline,S6,4,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,74.8725,1.0,0.0,5000.0,65.9,5,2e-06,18.959
+E2_baseline,S6,5,monitoring,ROLLBACK,INVESTIGATE,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,66.4764,1.0,0.0,5000.0,74.1,6,3e-06,13.312
+E2_baseline,S6,6,monitoring,ROLLBACK,INVESTIGATE,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,68.6379,1.0,0.0,5000.0,71.8,7,2e-06,14.2127
+E2_baseline,S6,7,monitoring,ROLLBACK,INVESTIGATE,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,65.9344,1.0,0.0,5000.0,74.7,5,2e-06,16.9776
+E2_baseline,S6,8,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,73.7384,1.0,0.0,5000.0,66.9,5,2e-06,13.7246
+E2_baseline,S6,9,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,67.3995,1.0,0.0,5000.0,73.1,7,2e-06,12.3641
+E2_baseline,S6,10,monitoring,ROLLBACK,ROLLBACK,True,True,Kanārija kļūdu īpatsvars 100.0% > robeža 5%,1.0,67.1199,1.0,0.0,5000.0,73.4,8,1e-06,12.1864
+E2_baseline,S7,1,deployment,CONTINUE,CONTINUE,False,False,Kļūdu delta 4.0% un latentums 8% pieļaujamās robežās,0.04,0.0807,0.04,0.0,72.3,66.9,0,4e-06,11.6087
+E2_baseline,S7,2,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 12.0% > robeža 5%,0.12,0.0465,0.12,0.0,65.2,62.3,0,3e-06,11.2553
+E2_baseline,S7,3,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 10.0% > robeža 5%,0.1,0.0292,0.1,0.0,66.9,65.0,0,6e-06,10.4938
+E2_baseline,S7,4,deployment,ROLLBACK,ROLLBACK,True,True,Kļūdu delta 8.0% > robeža 5%,0.08,0.1125,0.08,0.0,71.2,64.0,0,3e-06,10.2955
+E2_baseline,S7,5,deployment,CONTINUE,ROLLBACK,False,True,Kļūdu delta 2.0% un latentums 14% pieļaujamās robežās,0.02,0.1351,0.02,0.0,74.8,65.9,0,3e-06,9.7659
+E2_baseline,S7,6,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 12.0% > robeža 5%,0.12,-0.0759,0.12,0.0,70.6,76.4,0,2e-06,11.3833
+E2_baseline,S7,7,deployment,CONTINUE,CONTINUE,False,False,Kļūdu delta 4.0% un latentums 7% pieļaujamās robežās,0.04,0.0654,0.04,0.0,73.3,68.8,0,2e-06,11.314
+E2_baseline,S7,8,deployment,CONTINUE,CONTINUE,False,False,Kļūdu delta 4.0% un latentums 13% pieļaujamās robežās,0.04,0.1271,0.04,0.0,73.6,65.3,0,7e-06,10.4805
+E2_baseline,S7,9,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 10.0% > robeža 5%,0.1,0.0043,0.1,0.0,69.4,69.1,0,3e-06,11.4074
+E2_baseline,S7,10,deployment,ROLLBACK,CONTINUE,True,False,Kļūdu delta 6.0% > robeža 5%,0.06,0.0471,0.06,0.0,68.9,65.8,0,2e-06,10.5489
