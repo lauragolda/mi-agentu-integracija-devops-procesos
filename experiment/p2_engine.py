@@ -177,43 +177,6 @@ def run_p2(data):
 
         correct = (decision == "ROLLBACK")
 
-    elif scenario_id == "S8":
-        # Security issues - sagaidams BLOCK
-        print("    [Chain 1/2] Delivery agent...")
-        delivery_result = delivery_agent.analyze(data)
-        llm_total_time += delivery_result.get("llm_time_sec", 0)
-        chain_log.append({
-            "agent": "delivery",
-            "decision": delivery_result.get("decision"),
-            "risk_level": delivery_result.get("risk_level"),
-            "reason": delivery_result.get("reason"),
-        })
-        print(f"    -> Delivery: {delivery_result.get('decision')} "
-              f"(risk: {delivery_result.get('risk_level')})")
-
-        print("    [Chain 2/2] Infrastructure agent...")
-        infra_result = infra_agent.analyze(data, delivery_result=delivery_result)
-        llm_total_time += infra_result.get("llm_time_sec", 0)
-        chain_log.append({
-            "agent": "infra",
-            "ready": infra_result.get("ready"),
-            "resource_status": infra_result.get("resource_status"),
-        })
-        print(f"    -> Infra: ready={infra_result.get('ready')} "
-              f"({infra_result.get('resource_status')})")
-
-        if delivery_result.get("decision") == "BLOCK":
-            decision = "BLOCK"
-            reason = f"[Delivery agent] {delivery_result.get('reason', '')}"
-        elif not infra_result.get("ready", True):
-            decision = "BLOCK"
-            reason = f"[Infra agent] {infra_result.get('reason', '')}"
-        else:
-            decision = "DEPLOY"
-            reason = f"[Chain OK] {delivery_result.get('reason', '')}"
-
-        correct = (decision == "BLOCK")
-
     elapsed = time.time() - start
     agents_used = [s["agent"] for s in chain_log]
     print(f"    [Chain complete] Agents: {agents_used} | Total LLM time: {llm_total_time:.1f}s")
