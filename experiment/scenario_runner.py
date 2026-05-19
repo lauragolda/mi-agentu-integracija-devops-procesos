@@ -16,11 +16,11 @@ HEADERS = {
 }
 
 REPO_DIR = r'C:\Users\TAAGOLA6\bakalaurs-experiment'
-OUTPUT_FILE = "results/results_galigais_01.csv"
+OUTPUT_FILE = "results/results.csv"
 STABLE_URL = "http://localhost:5000"
 CANARY_URL = "http://localhost:5001"
 NGINX_URL = "http://localhost:8080"
-FEEDBACK_FILE = "results/feedback_loop_01.json"
+FEEDBACK_FILE = "results/feedback_loop.json"
 
 FIELDNAMES = [
     "scenario_id", "run_id",
@@ -75,7 +75,7 @@ def switch_canary(version):
         f"app-canary-{version}"
     ], capture_output=True)
     time.sleep(3)
-    print(f"  [Canary] Done - canary is now {version}")
+    print(f"[Canary] Done - canary is now {version}")
 
 def save_feedback(scenario_id, run_id, diag_result):
     feedback = {
@@ -96,7 +96,7 @@ def save_feedback(scenario_id, run_id, diag_result):
     existing.append(feedback)
     with open(FEEDBACK_FILE, "w") as f:
         json.dump(existing, f, indent=2)
-    print(f"  [Feedback] Saved diagnostics to feedback loop")
+    print(f"[Feedback] Saved diagnostics to feedback loop")
 
 def load_feedback():
     if not os.path.exists(FEEDBACK_FILE):
@@ -108,7 +108,7 @@ def load_feedback():
             return []
 
 def trigger_github_actions(branch):
-    print(f"  [CI] Triggering GitHub Actions on branch: {branch}...")
+    print(f"[CI] Triggering GitHub Actions on branch: {branch}...")
     git_cmd(["checkout", branch])
     git_cmd(["commit", "--allow-empty", "-m", "CI trigger: experiment run"])
     git_cmd(["push", "origin", branch])
@@ -116,7 +116,7 @@ def trigger_github_actions(branch):
     time.sleep(5)
 
 def wait_for_actions_result(branch, timeout=300):
-    print(f"  [CI] Waiting for GitHub Actions ({branch})...")
+    print(f"[CI] Waiting for GitHub Actions ({branch})...")
     start = time.time()
     last_run_id = None
     while time.time() - start < timeout:
@@ -230,11 +230,11 @@ def measure_with_load(count=100):
     for t in threads: t.start()
     for t in threads: t.join()
 
-    print(f"  [Load] Nginx: errors={nginx_r.get('error_rate',0):.0%}, "
+    print(f" [Load] Nginx: errors={nginx_r.get('error_rate',0):.0%}, "
           f"latency={nginx_r.get('avg_latency',0):.0f}ms")
-    print(f"  [Load] Stable: errors={stable_r.get('error_rate',0):.0%}, "
+    print(f" [Load] Stable: errors={stable_r.get('error_rate',0):.0%}, "
           f"latency={stable_r.get('avg_latency',0):.0f}ms")
-    print(f"  [Load] Canary: errors={canary_r.get('error_rate',0):.0%}, "
+    print(f" [Load] Canary: errors={canary_r.get('error_rate',0):.0%}, "
           f"latency={canary_r.get('avg_latency',0):.0f}ms")
 
     return {
@@ -257,7 +257,7 @@ def get_docker_logs(container, lines=30):
         return ""
 
 def do_rollback():
-    print("  [ROLLBACK] Switching canary back to stable...")
+    print("[ROLLBACK] Switching canary back to stable...")
     subprocess.run(["docker", "rm", "-f", "app-canary"], capture_output=True)
     subprocess.run([
         "docker", "run", "-d",
@@ -277,9 +277,9 @@ def do_rollback():
         except:
             pass
     if success >= 4:
-        print(f"  [ROLLBACK] SUCCESS - system stable ({success}/5 checks passed)")
+        print(f"[ROLLBACK] SUCCESS - system stable ({success}/5 checks passed)")
     else:
-        print(f"  [ROLLBACK] WARNING - unstable ({success}/5 checks passed)")
+        print(f"[ROLLBACK] WARNING - unstable ({success}/5 checks passed)")
     return success >= 4
 
 def run_all():
@@ -314,16 +314,16 @@ def run_all():
 
                 passed, failed, total_tests, test_output, coverage, security = \
                     get_test_results_from_actions(gh_run_id)
-                print(f"  Tests: {passed} passed / {failed} failed | "
+                print(f"Tests: {passed} passed / {failed} failed | "
                       f"Coverage: {coverage}% | Security: {security}")
 
-                print("  [Load] Generating load...")
+                print("[Load] Generating load...")
                 load_metrics = measure_with_load(100)
 
                 docker_logs = get_docker_logs("app-canary")
                 log_lines = len(docker_logs.splitlines())
                 log_chars = len(docker_logs)
-                print(f"  [Logs] {log_lines} lines, {log_chars} chars")
+                print(f"[Logs] {log_lines} lines, {log_chars} chars")
 
                 previous_feedback = load_feedback()
 
@@ -374,7 +374,7 @@ def run_all():
                     "log_chars": log_chars,
                 })
                 f.flush()
-                print(f"  Decision: {result['decision']} "
+                print(f"Decision: {result['decision']} "
                       f"({'CORRECT' if result['correct'] else 'WRONG'}) "
                       f"[{result['llm_time_sec']:.1f}s]")
 
@@ -393,8 +393,4 @@ def run_all():
     print(f"\nResults saved: {OUTPUT_FILE}")
 
 if __name__ == "__main__":
-    print("=== Real DevOps Experiment ===")
-    print("GitHub Actions + Docker + Prometheus + Nginx + Ollama")
-    print("5 AI agents in chain | 8 scenarios")
-    print()
     run_all()
