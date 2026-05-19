@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: "app-stable"
+    static_configs:
+      - targets: ["app-stable:5000"]
+    metrics_path: "/metrics"
+
+  - job_name: "app-canary"
+    static_configs:
+      - targets: ["app-canary:5000"]
+    metrics_path: "/metrics"
+
+  - job_name: "nginx"
+    static_configs:
+      - targets: ["nginx-lb:80"]
+    metrics_path: "/nginx_status"
