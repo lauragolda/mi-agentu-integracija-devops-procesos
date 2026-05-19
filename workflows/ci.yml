@@ -1,0 +1,79 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main, stable, broken]
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install flask requests pytest pytest-cov bandit flake8
+
+      - name: Lint check (flake8)
+        run: flake8 app/main.py --max-line-length=100 --statistics
+        continue-on-error: true
+
+      - name: Security scan (bandit)
+        run: |
+          bandit -r app/main.py -f json -o bandit-report.json
+          bandit -r app/main.py -f txt
+        continue-on-error: true
+
+      - name: Stop old container if exists
+        run: docker rm -f app-ci-test
+        continue-on-error: true
+
+      - name: Build Docker image
+        run: docker build -t app-ci-test ./app
+
+      - name: Start application in Docker
+        run: |
+          docker run -d --name app-ci-test -p 5002:5000 app-ci-test
+          Start-Sleep -Seconds 3
+
+      - name: Run pytest with coverage
+        run: |
+          New-Item -ItemType Directory -Force -Path experiment/results
+          cd experiment
+          python -m pytest tests.py -v --tb=short `
+            --junit-xml=results/test-results.xml `
+            --cov=. `
+            --cov-report=term-missing `
+            --cov-report=json:results/coverage.json
+
+      - name: Upload test results artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-${{ github.sha }}
+          path: |
+            experiment/results/test-results.xml
+            experiment/results/coverage.json
+
+      - name: Upload security report artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: security-report-${{ github.sha }}
+          path: bandit-report.json
+
+      - name: Show test results
+        if: always()
+        run: |
+          if (Test-Path experiment/results/test-results.xml) {
+            Get-Content experiment/results/test-results.xml
+          }
+          if (Test-Path experiment/results/coverage.json) {
+            Get-Content experiment/results/coverage.json
+          }
+
+      - name: Stop CI container
+        if: always()
+        run: docker rm -f app-ci-test
+        continue-on-error: true
