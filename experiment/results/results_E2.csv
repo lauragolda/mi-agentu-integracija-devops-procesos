@@ -1,0 +1,172 @@
+scenario_id,run_id,decision,reason,correct,time_sec,llm_time_sec,tests_passed,tests_failed,tests_total,canary_error_rate,canary_latency_ms,stable_error_rate,stable_latency_ms,nginx_error_rate,nginx_latency_ms,gh_actions_status,docker_logs,canary_version,log_lines,log_chars
+S1,1,DEPLOY,"[Chain OK] Pipeline passed all tests, smoke tests, and security scan. Code coverage is inadequate (8%).",True,8.4866,8.41,12,0,12,0.0,63.0,0.0,64.8,0.0,65.6,success,"172.18.0.1 - - [02/May/2026 19:11:42] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:11:42] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:11:42] ""GET /api/data HTTP/1.1""",stable,30,2068
+S1,2,DEPLOY,"[Chain OK] GitHub Actions passed successfully, all tests passed (100% code coverage), no security issues were found, and smoke tests also passed.",True,9.0553,9.035,12,0,12,0.0,64.7,0.0,62.2,0.0,66.2,success,"172.18.0.1 - - [02/May/2026 19:12:58] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:12:58] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:12:58] ""GET /api/data HTTP/1.1""",stable,30,2068
+S1,3,DEPLOY,"[Chain OK] Pipeline successfully completed with all tests passing, no security issues found, and smoke tests also passing.",True,9.2347,9.175,12,0,12,0.0,65.2,0.0,66.9,0.0,66.4,success,"172.18.0.5 - - [02/May/2026 19:14:13] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:14:13] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:14:14] ""GET /api/data HTTP/1.1""",stable,30,2069
+S1,4,DEPLOY,"[Chain OK] GitHub Actions had a success, all tests passed (12/12), smoke tests also passed, and no security issues were found.",True,9.3599,9.317,12,0,12,0.0,68.1,0.0,68.1,0.0,72.1,success,"172.18.0.1 - - [02/May/2026 19:15:29] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:15:29] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:15:29] ""GET /api/data HTTP/1.1""",stable,30,2068
+S1,5,DEPLOY,"[Chain OK] GitHub Actions passed with success, all tests (12/12) passed, smoke tests (0/4) passed and security scan found no issues (0)",True,10.0549,9.992,12,0,12,0.0,65.7,0.0,67.9,0.0,69.5,success,"172.18.0.1 - - [02/May/2026 19:16:46] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:16:46] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:16:46] ""GET /api/data HTTP/1.1""",stable,30,2068
+S1,6,DEPLOY,"[Chain OK] GitHub Actions result was successful, all tests passed (12/12), smoke tests passed (0/4), and security scan found no issues (0). Code coverage is still at 8%, which falls below the minimum acceptable threshold of 60%.",True,10.106,10.036,12,0,12,0.0,69.1,0.0,67.8,0.0,68.7,success,"172.18.0.1 - - [02/May/2026 19:18:04] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:18:04] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:18:04] ""GET /api/data HTTP/1.1""",stable,30,2069
+S1,7,DEPLOY,"[Chain OK] Pipeline succeeded with all tests passing, smoke tests succeeding and no security issues found.",True,9.6732,9.643,12,0,12,0.0,68.5,0.0,69.5,0.0,70.4,success,"172.18.0.1 - - [02/May/2026 19:19:21] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:19:21] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:19:21] ""GET /api/data HTTP/1.1""",stable,30,2068
+S1,8,DEPLOY,"[Chain OK] GitHub Actions was successful, all tests passed, and security scan did not find any issues. However, code coverage is currently at 8%, which is below the minimum acceptable threshold of 60%. Smoke tests also failed with a 0/4 result. Therefore, while deployment can proceed based on some criteria being met, it's crucial to address the low code coverage as soon as possible.",True,11.3489,11.284,12,0,12,0.0,62.8,0.0,64.0,0.0,66.6,success,"172.18.0.1 - - [02/May/2026 19:20:49] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:20:49] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:20:49] ""GET /api/data HTTP/1.1""",stable,30,2068
+S1,9,DEPLOY,[Chain OK] GitHub Actions success AND tests passed with 100% code coverage and no security issues found,True,9.8074,9.745,12,0,12,0.0,62.6,0.0,62.9,0.0,68.0,success,"172.18.0.5 - - [02/May/2026 19:22:30] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:22:30] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:22:30] ""GET /api/data HTTP/1.1""",stable,30,2068
+S1,10,DEPLOY,"[Chain OK] GitHub Actions resulted in success and all tests (12/12 passed), smoke tests (0/4 passed) and security scan found no issues. Coverage is 8% which is below the minimum acceptable threshold.",True,10.3499,10.259,12,0,12,0.0,62.3,0.0,63.9,0.0,65.6,success,"172.18.0.1 - - [02/May/2026 19:23:46] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:23:47] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:23:47] ""GET /api/data HTTP/1.1""",stable,30,2068
+S2,1,BLOCK,"[Delivery agent] GitHub Actions failure, low code coverage (9%), security scan clean but multiple smoke test failures (0/4) and tests are failing with high failure rate.",True,10.2178,10.187,6,6,12,0.0,62.7,0.0,64.3,0.0,64.4,failure,"172.18.0.1 - - [02/May/2026 19:25:25] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:25:25] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:25:25] ""GET /api/data HTTP/1.1""",broken_tests,30,2068
+S2,2,BLOCK,"[Delivery agent] GitHub Actions failure and smoke tests failure indicate potential application instability, despite passing tests.",True,10.0994,10.056,6,6,12,0.0,64.0,0.0,64.1,0.0,64.6,failure,"172.18.0.1 - - [02/May/2026 19:26:57] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:26:57] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:26:57] ""GET /api/data HTTP/1.1""",broken_tests,30,2068
+S2,3,BLOCK,"[Delivery agent] GitHub Actions failed, resulting in test failures and smoke tests failures, despite acceptable security scan results.",True,9.4732,9.42,6,6,12,0.0,62.9,0.0,64.1,0.0,67.7,failure,"172.18.0.1 - - [02/May/2026 19:28:40] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:28:40] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:28:40] ""GET /api/data HTTP/1.1""",broken_tests,30,2068
+S2,4,BLOCK,"[Delivery agent] GitHub Actions failed, smoke tests failed, and low code coverage (9%) despite passing all security scans.",True,9.7742,9.7,6,6,12,0.0,65.4,0.0,65.6,0.0,67.1,failure,"172.18.0.1 - - [02/May/2026 19:30:14] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:30:14] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:30:14] ""GET /api/data HTTP/1.1""",broken_tests,30,2068
+S2,5,BLOCK,[Delivery agent] GitHub Actions failure indicates a critical issue and incomplete test coverage (9% coverage) alongside failed smoke tests (0/4),True,9.8386,9.788,9,3,12,0.0,64.4,0.0,65.7,0.0,65.7,failure,"172.18.0.1 - - [02/May/2026 19:31:46] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:31:46] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:31:46] ""GET /api/data HTTP/1.1""",broken_tests,30,2068
+S2,6,BLOCK,[Delivery agent] GitHub Actions failure and test results indicate potential issues that need attention.,True,9.6156,9.56,4,8,12,0.0,68.6,0.0,69.6,0.0,72.1,failure,"172.18.0.1 - - [02/May/2026 19:33:19] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:33:19] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:33:19] ""GET /api/data HTTP/1.1""",broken_tests,30,2068
+S2,7,BLOCK,"[Delivery agent] Pipeline failed due to GitHub Actions failure and smoke tests failed, indicating a potential issue with the application.",True,9.9598,9.899,7,5,12,0.0,63.4,0.0,61.2,0.0,63.6,failure,"172.18.0.1 - - [02/May/2026 19:34:50] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:34:50] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.4 - - [02/May/2026 19:34:51] ""GET /metrics HTTP/1.1"" ",broken_tests,30,2068
+S2,8,BLOCK,"[Delivery agent] GitHub Actions result failed, tests did not pass with a low code coverage and security scan had issues",True,9.858,9.787,5,7,12,0.0,70.1,0.0,67.8,0.0,67.6,failure,"172.18.0.1 - - [02/May/2026 19:36:22] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:36:22] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:36:22] ""GET /api/data HTTP/1.1""",broken_tests,30,2068
+S2,9,BLOCK,"[Delivery agent] GitHub Actions failure, smoke tests failed (Passed: 0/4), security scan found 0 issues which is less than the maximum acceptable of 2, and code coverage is at 9% which is below the minimum acceptable of 60%",True,10.2382,10.221,8,4,12,0.0,70.2,0.0,68.9,0.0,72.8,failure,"172.18.0.1 - - [02/May/2026 19:38:15] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:38:15] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:38:15] ""GET /api/data HTTP/1.1""",broken_tests,30,2068
+S2,10,BLOCK,"[Delivery agent] GitHub Actions failure, Pytest test results indicate failed tests (5/12) and low code coverage (9%) with security scan not detecting issues and smoke tests failing (0/4)",True,11.2078,11.145,7,5,12,0.0,60.7,0.0,61.9,0.0,63.3,failure,"172.18.0.1 - - [02/May/2026 19:39:48] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:39:48] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:39:48] ""GET /api/data HTTP/1.1""",broken_tests,30,2068
+S3,1,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: NONE",True,9.8018,9.801,12,0,12,0.0,68.9,0.0,68.0,0.0,71.5,success,"172.18.0.1 - - [02/May/2026 19:41:11] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:41:11] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:41:11] ""GET /api/data HTTP/1.1""",stable,30,2068
+S3,2,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: NONE",True,9.512,9.511,12,0,12,0.0,64.0,0.0,64.0,0.0,65.5,success,"172.18.0.1 - - [02/May/2026 19:42:28] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:42:28] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:42:28] ""GET /api/data HTTP/1.1""",stable,30,2068
+S3,3,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: NONE",True,10.6422,10.641,12,0,12,0.0,64.6,0.0,65.8,0.0,66.7,success,"172.18.0.1 - - [02/May/2026 19:43:44] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:43:44] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:43:44] ""GET /api/data HTTP/1.1""",stable,30,2068
+S3,4,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: NONE",True,9.5799,9.579,12,0,12,0.0,63.7,0.0,63.7,0.0,68.5,success,"172.18.0.1 - - [02/May/2026 19:45:02] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:45:02] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:45:02] ""GET /api/data HTTP/1.1""",stable,30,2068
+S3,5,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: NONE",True,9.4215,9.421,12,0,12,0.0,61.1,0.0,61.1,0.0,62.7,success,"172.18.0.1 - - [02/May/2026 19:46:18] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:46:18] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:46:18] ""GET /api/data HTTP/1.1""",stable,30,2068
+S3,6,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: NONE",True,10.4049,10.404,12,0,12,0.0,67.0,0.0,67.6,0.0,71.9,success,"172.18.0.1 - - [02/May/2026 19:47:35] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:47:35] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:47:35] ""GET /api/data HTTP/1.1""",stable,30,2068
+S3,7,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: NONE",True,10.6644,10.663,12,0,12,0.0,65.0,0.0,63.6,0.0,67.4,success,"172.18.0.1 - - [02/May/2026 19:48:52] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:48:53] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.4 - - [02/May/2026 19:48:53] ""GET /metrics HTTP/1.1"" ",stable,30,2068
+S3,8,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: NONE",True,10.7418,10.741,12,0,12,0.0,67.9,0.0,69.2,0.0,72.3,success,"172.18.0.1 - - [02/May/2026 19:50:10] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:50:10] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:50:11] ""GET /api/data HTTP/1.1""",stable,30,2068
+S3,9,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: NONE",True,9.6715,9.671,12,0,12,0.0,66.7,0.0,67.6,0.0,69.7,success,"172.18.0.1 - - [02/May/2026 19:51:28] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:51:28] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:51:29] ""GET /api/data HTTP/1.1""",stable,30,2068
+S3,10,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: NONE",True,9.8127,9.812,12,0,12,0.0,65.7,0.0,65.6,0.0,72.8,success,"172.18.0.1 - - [02/May/2026 19:52:45] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.5 - - [02/May/2026 19:52:45] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 19:52:45] ""GET /api/data HTTP/1.1""",stable,30,2068
+S4,1,ROLLBACK,"[Canary: ROLLBACK] Error rate delta of +100.0% and latency delta of +6932.3% indicate significant degradation after Canary rollout, with an unacceptable error rate (100.0%) | [Monitoring: ROLLBACK]",True,9.3732,9.373,6,6,12,1.0,5000.0,0.0,71.1,0.02,174.6,failure,Error response from daemon: No such container: app-canary,broken_latency,1,57
+S4,2,ROLLBACK,"[Canary: ROLLBACK] Degradation detected due to 100.0% error rate and 5000 ms average latency, exceeding acceptable thresholds of <5% for error rate and <30% for latency increase. | [Monitoring: NONE]",True,11.2897,11.289,7,5,12,1.0,5000.0,0.0,70.6,0.02,181.2,failure,Error response from daemon: No such container: app-canary,broken_latency,1,57
+S4,3,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: INVESTIGATE",False,9.7523,9.751,5,7,12,1.0,5000.0,0.0,71.1,0.02,175.7,failure,Error response from daemon: No such container: app-canary,broken_latency,1,57
+S4,4,ROLLBACK,"[Canary: ROLLBACK] Error rate delta: +100.0%, Latency delta: +6540.1% indicates significant degradation | [Monitoring: ROLLBACK]",True,8.9175,8.916,7,5,12,1.0,5000.0,0.0,75.3,0.0,100.1,failure,Error response from daemon: No such container: app-canary,broken_latency,1,57
+S4,5,ROLLBACK,[Canary: CONTINUE]  | [Monitoring: ROLLBACK],True,10.3481,10.347,3,9,12,1.0,5000.0,0.0,75.2,0.02,177.4,failure,Error response from daemon: No such container: app-canary,broken_latency,1,57
+S4,6,ROLLBACK,[Canary: ROLLBACK] Error response from daemon: No such container: app-canary; Error rate: 100.0%; Average latency: 5000 ms; Latency delta: +7651.9% | [Monitoring: ROLLBACK],True,10.7783,10.778,3,9,12,1.0,5000.0,0.0,64.5,0.02,180.6,failure,Error response from daemon: No such container: app-canary,broken_latency,1,57
+S4,7,ROLLBACK,"[Canary: ROLLBACK] Degradation detected: error rate of 100.0% in canary version, with a delta of +100.0%, while exceeding the acceptable threshold of 5% and increasing latency by 6629.5% | [Monitoring: ROLLBACK]",True,14.3232,14.322,5,7,12,1.0,5000.0,0.0,74.3,0.02,182.0,failure,Error response from daemon: No such container: app-canary,broken_latency,1,57
+S4,8,ROLLBACK,[Canary: ROLLBACK] Degradation detected due to a significant increase in error rate (100.0%) and latency (5000 ms) compared to the baseline version. | [Monitoring: NONE],True,14.4938,14.493,8,4,12,1.0,5000.0,0.0,65.0,0.02,174.2,failure,Error response from daemon: No such container: app-canary,broken_latency,1,57
+S4,9,ROLLBACK,[Canary: ROLLBACK] Degradation detected with error rate of 100.0% and latency increase of 6777.6% compared to the baseline version. | [Monitoring: NONE],True,10.8759,10.876,7,5,12,1.0,5000.0,0.0,72.7,0.02,180.4,failure,Error response from daemon: No such container: app-canary,broken_latency,1,57
+S4,10,CONTINUE,"[Chain OK] Canary: CONTINUE, Monitoring: INVESTIGATE",False,9.9772,9.975,4,8,12,1.0,5000.0,0.0,62.8,0.02,174.0,failure,Error response from daemon: No such container: app-canary,broken_latency,1,57
+S5,1,STABLE,"The new version container is performing within normal latency and error rate limits, with no recurring patterns in the logs.",True,5.6654,5.665,12,0,12,0.0,64.1,0.0,65.4,0.0,68.2,success,"172.18.0.1 - - [02/May/2026 20:43:41] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:43:41] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.5 - - [02/May/2026 20:43:41] ""GET /api/data HTTP/1.1""",stable,30,2068
+S5,2,STABLE,,True,5.5249,5.525,12,0,12,0.0,65.3,0.0,66.9,0.0,65.1,success,"172.18.0.4 - - [02/May/2026 20:44:53] ""GET /metrics HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:44:53] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:44:53] ""GET /api/data HTTP/1.1"" ",stable,30,2068
+S5,3,STABLE,"The new version container is operating within normal error and latency ranges, with no discernible errors or performance degradation. All instances are responding correctly to requests.",True,5.8849,5.884,12,0,12,0.0,64.5,0.0,63.6,0.0,66.2,success,"172.18.0.1 - - [02/May/2026 20:46:05] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.5 - - [02/May/2026 20:46:05] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:46:05] ""GET /api/data HTTP/1.1""",stable,30,2068
+S5,4,STABLE,"New version deployment showed stable metrics and logs, with minor latency delta.",True,5.3331,5.333,12,0,12,0.0,67.5,0.0,66.5,0.0,67.7,success,"172.18.0.5 - - [02/May/2026 20:47:18] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:47:18] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:47:18] ""GET /api/data HTTP/1.1""",stable,30,2068
+S5,5,STABLE,"The application is running normally with stable version, low latency, and no errors detected from container logs.",True,5.5466,5.546,12,0,12,0.0,64.1,0.0,65.6,0.0,68.3,success,"172.18.0.1 - - [02/May/2026 20:48:30] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:48:30] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:48:30] ""GET /api/data HTTP/1.1""",stable,30,2068
+S5,6,STABLE,"Metrics and logs indicate no issues with stable version, low error rates and normal latency.",True,5.4417,5.441,12,0,12,0.0,71.3,0.0,70.4,0.0,70.6,success,"172.18.0.1 - - [02/May/2026 20:49:43] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.5 - - [02/May/2026 20:49:43] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:49:43] ""GET /api/data HTTP/1.1""",stable,30,2068
+S5,7,STABLE,"The new version container is showing excellent stability with no error patterns in the Docker logs. Latency is within normal bounds, indicating successful deployment.",True,5.9285,5.928,12,0,12,0.0,60.6,0.0,62.2,0.0,63.3,success,"172.18.0.1 - - [02/May/2026 20:50:56] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:50:56] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.5 - - [02/May/2026 20:50:56] ""GET /api/data HTTP/1.1""",stable,30,2068
+S5,8,STABLE,"The stable version container is performing well, with low error rates and acceptable latency. All logs appear to be successful requests.",True,6.6998,6.699,12,0,12,0.0,65.5,0.0,65.9,0.0,69.5,success,"172.18.0.1 - - [02/May/2026 20:52:08] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:52:08] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:52:09] ""GET /api/data HTTP/1.1""",stable,30,2068
+S5,9,STABLE,Both stable and new version containers are experiencing normal latency and no errors have been detected in the logs.,True,5.542,5.542,12,0,12,0.0,68.3,0.0,63.5,0.0,68.1,success,"172.18.0.5 - - [02/May/2026 20:53:44] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:53:44] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:53:44] ""GET /api/data HTTP/1.1""",stable,30,2068
+S5,10,STABLE,"The new version container is stable, with no errors or significant degradation observed.",True,5.7074,5.707,12,0,12,0.0,62.7,0.0,62.7,0.0,64.9,success,"172.18.0.1 - - [02/May/2026 20:54:57] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 20:54:57] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.5 - - [02/May/2026 20:54:57] ""GET /api/data HTTP/1.1""",stable,30,2068
+S6,1,ROLLBACK,"[Monitoring->Diagnostics] A canary deployment issue occurred due to misconfigured Docker networking, resulting in a high error rate and latency spikes. The stable version was rolled back to mitigate the impact on users. Investigation into Docker networking configuration is recommended to prevent recurrence.",True,12.6646,12.664,2,10,12,1.0,5000.0,0.0,67.4,0.02,181.3,failure,Error response from daemon: No such container: app-canary,broken_memory,1,57
+S6,2,INVESTIGATE,"[Monitoring->Diagnostics] The application's new version experienced high error rates and latency issues due to an incorrect configuration of the app-canary container. A deep root cause analysis revealed a misconfigured Docker Compose file and network isolation issue, leading to a cascade of failures. Immediate action is required to correct the configuration and prevent further incidents.",True,14.1894,14.189,5,7,12,1.0,5000.0,0.0,62.4,0.02,179.5,failure,Error response from daemon: No such container: app-canary,broken_memory,1,57
+S6,3,INVESTIGATE,"[Monitoring->Diagnostics] A production incident occurred due to a series of human error and configuration inconsistencies, causing high error rates and latency issues. The issue was resolved by correcting the Docker daemon configuration, fixing DNS resolution issues, and updating deployment scripts. Reviewing logs and metrics provided valuable insights into identifying the root cause.",True,15.1809,15.18,5,7,12,1.0,5000.0,0.0,73.6,0.0,104.8,failure,Error response from daemon: No such container: app-canary,broken_memory,1,57
+S6,4,ROLLBACK,"[Monitoring->Diagnostics] The production incident was caused by misconfigured Docker service and incorrect referencing of the new application version, leading to increased error rates and latency. Immediate roll back to stable version has been initiated. Investigations are ongoing to prevent recurrence.",True,18.959,18.957,7,5,12,1.0,5000.0,0.0,65.9,0.0,98.5,failure,Error response from daemon: No such container: app-canary,broken_memory,1,57
+S6,5,INVESTIGATE,"[Monitoring->Diagnostics] New application version rollout experienced significant latency and error rates due to misconfigured canary deployment, causing 10% of users a high-severity impact. The incident has been assessed as not critical from a security perspective but still significant business-wise.",True,13.312,13.311,6,6,12,1.0,5000.0,0.0,74.1,0.02,182.2,failure,Error response from daemon: No such container: app-canary,broken_memory,1,57
+S6,6,INVESTIGATE,"[Monitoring->Diagnostics] A critical error occurred due to misconfigured container aliases, leading to significant latency and user dissatisfaction. The incident highlights the importance of thorough testing and review processes. Immediate action is required to correct the configuration issue and deploy a stable version.",True,14.2127,14.212,5,7,12,1.0,5000.0,0.0,71.8,0.0,104.8,failure,Error response from daemon: No such container: app-canary,broken_memory,1,57
+S6,7,INVESTIGATE,"[Monitoring->Diagnostics] A misconfigured Docker container and potential compatibility issues with the new application version caused a significant increase in errors and latency, resulting in a complete system failure for all users.",True,16.9776,16.977,7,5,12,1.0,5000.0,0.0,74.7,0.0,104.3,failure,Error response from daemon: No such container: app-canary,broken_memory,1,57
+S6,8,ROLLBACK,"[Monitoring->Diagnostics] A misconfigured environment variable led to an unregistered 'app-canary' container, causing high error rates and latency in the new version. The incident was resolved by rolling back the deployment to a stable version.",True,13.7246,13.724,7,5,12,1.0,5000.0,0.0,66.9,0.0,103.3,failure,Error response from daemon: No such container: app-canary,broken_memory,1,57
+S6,9,ROLLBACK,"[Monitoring->Diagnostics] A critical issue with app canary deployment caused widespread errors and latency, leading to a significant user impact. The root cause was identified as incorrect deployment scripts. Immediate action has been taken to correct the deployment process.",True,12.3641,12.363,5,7,12,1.0,5000.0,0.0,73.1,0.02,175.9,failure,Error response from daemon: No such container: app-canary,broken_memory,1,57
+S6,10,ROLLBACK,"[Monitoring->Diagnostics] A new version deployment resulted in high error rate and significant latency increase, likely due to misconfigured canary deployment. The incident was triggered by a 'No such container' error in the Docker logs. Rolling back the failed version will resolve the issue.",True,12.1864,12.185,4,8,12,1.0,5000.0,0.0,73.4,0.02,182.2,failure,Error response from daemon: No such container: app-canary,broken_memory,1,57
+S7,1,CONTINUE,[Chain OK] Canary: CONTINUE,False,11.6087,11.608,12,0,12,0.04,72.3,0.0,66.9,0.01,68.4,success,"172.18.0.1 - - [02/May/2026 21:46:21] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:46:21] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:46:21] ""GET /api/data HTTP/1.1""",broken_edge,30,2099
+S7,2,CONTINUE,[Chain OK] Canary: CONTINUE,False,11.2553,11.254,12,0,12,0.12,65.2,0.0,62.3,0.0,64.5,success,"172.18.0.1 - - [02/May/2026 21:47:39] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:47:39] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:47:39] ""GET /api/data HTTP/1.1""",broken_edge,30,2161
+S7,3,CONTINUE,[Chain OK] Canary: CONTINUE,False,10.4938,10.493,12,0,12,0.1,66.9,0.0,65.0,0.02,67.2,success,"172.18.0.1 - - [02/May/2026 21:48:57] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:48:57] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.5 - - [02/May/2026 21:48:57] ""GET /api/data HTTP/1.1""",broken_edge,30,2161
+S7,4,ROLLBACK,[Canary: ROLLBACK] Error rate delta of +8.0% exceeds acceptable threshold of 5% and latency delta of +11.3% exceeds acceptable threshold of 30%,True,10.2955,10.294,12,0,12,0.08,71.2,0.0,64.0,0.01,67.2,success,"172.18.0.1 - - [02/May/2026 21:50:17] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:50:17] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:50:17] ""GET /api/data HTTP/1.1""",broken_edge,30,2130
+S7,5,ROLLBACK,[Canary: ROLLBACK] Degradation detected due to high error rate (2.0%) and latency increase (13.5% above baseline) from canary version,True,9.7659,9.765,12,0,12,0.02,74.8,0.0,65.9,0.02,66.0,success,"172.18.0.1 - - [02/May/2026 21:51:40] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:51:40] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.5 - - [02/May/2026 21:51:40] ""GET /api/data HTTP/1.1""",broken_edge,30,2068
+S7,6,CONTINUE,[Chain OK] Canary: CONTINUE,False,11.3833,11.382,12,0,12,0.12,70.6,0.0,76.4,0.01,73.9,success,"172.18.0.5 - - [02/May/2026 21:53:02] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:53:02] ""GET /api/data HTTP/1.1"" 200 -
+[2026-05-02 21:53:03,011] WARNING in main: Data endpoint: marg",broken_edge,30,2161
+S7,7,CONTINUE,[Chain OK] Canary: CONTINUE,False,11.314,11.313,12,0,12,0.04,73.3,0.0,68.8,0.01,70.3,success,"172.18.0.1 - - [02/May/2026 21:54:23] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:54:23] ""GET /api/data HTTP/1.1"" 200 -
+[2026-05-02 21:54:23,372] WARNING in main: Data endpoint: marg",broken_edge,30,2099
+S7,8,CONTINUE,[Chain OK] Canary: CONTINUE,False,10.4805,10.479,12,0,12,0.04,73.6,0.0,65.3,0.0,70.4,success,"172.18.0.1 - - [02/May/2026 21:55:43] ""GET /api/data HTTP/1.1"" 200 -
+[2026-05-02 21:55:44,000] WARNING in main: Data endpoint: marginal error rate detected
+172.18.0.1 - - [02/May/2026 21:55:44] ""[35m",broken_edge,30,2099
+S7,9,CONTINUE,[Chain OK] Canary: CONTINUE,False,11.4074,11.406,12,0,12,0.1,69.4,0.0,69.1,0.03,69.0,success,"172.18.0.1 - - [02/May/2026 21:57:03] ""[35m[1mGET /api/data HTTP/1.1[0m"" 500 -
+172.18.0.1 - - [02/May/2026 21:57:03] ""GET /api/data HTTP/1.1"" 200 -
+[2026-05-02 21:57:03,296] WARNING in main: Data e",broken_edge,30,2236
+S7,10,CONTINUE,[Chain OK] Canary: CONTINUE,False,10.5489,10.548,12,0,12,0.06,68.9,0.0,65.8,0.0,69.2,success,"172.18.0.4 - - [02/May/2026 21:58:21] ""GET /metrics HTTP/1.1"" 200 -
+172.18.0.5 - - [02/May/2026 21:58:21] ""GET /api/data HTTP/1.1"" 200 -
+172.18.0.1 - - [02/May/2026 21:58:21] ""GET /api/data HTTP/1.1"" ",broken_edge,30,2099
+

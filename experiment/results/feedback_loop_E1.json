@@ -1,0 +1,122 @@
+[
+  {
+    "from_scenario": "S6",
+    "run_id": 1,
+    "timestamp": "2026-05-04T02:56:23",
+    "root_cause": "The error response from daemon: No such container: app-canary indicates a misconfigured Docker Compose file. The issue is caused by a typo in the service name 'app-canary' which was not correctly referenced in the docker-compose.yml file. This resulted in the container not being created, leading to the failure of the new version deployment.",
+    "recovery_steps": [
+      "Review and correct the Docker Compose file to ensure accurate service names and references.",
+      "Verify that all containers are correctly created and running before proceeding with further deployment steps.",
+      "Apply the corrected Docker Compose file to roll back the new version deployment and restore the stable version."
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 2,
+    "timestamp": "2026-05-04T03:00:17",
+    "root_cause": "The 'app-canary' container was incorrectly referenced in the Docker Compose file, causing a misconfiguration that led to the error response from the daemon. The incorrect reference resulted from a typo in the image name.",
+    "recovery_steps": [
+      "Review and correct the Docker Compose file to ensure accurate references to the 'app-canary' image.",
+      "Verify that the correct image is being pulled and used by the container.",
+      "Run a manual rebuild of the application with the corrected configuration."
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 3,
+    "timestamp": "2026-05-04T03:04:14",
+    "root_cause": "The 'app-canary' container was not properly created in the Docker configuration, causing the new version deployment to fail. This is due to a misconfiguration of the Docker Compose file, which resulted from a change made during the upgrade process.",
+    "recovery_steps": [
+      "Manually update the Docker Compose file to include the 'app-canary' container",
+      "Verify that the new version has been properly deployed and updated in the system",
+      "Run a full system check to ensure all services are functioning correctly"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 4,
+    "timestamp": "2026-05-04T03:08:10",
+    "root_cause": "The 'No such container' error indicates that the Docker container configuration was not properly updated to reference the new version of the application. The issue lies in the incorrect use of environment variables, which caused the daemon to fail when trying to create the container.",
+    "recovery_steps": [
+      "Manually update the Docker container configuration to reference the new version of the application.",
+      "Verify that the environment variables are correctly set up for the new version of the application.",
+      "Run a manual rebuild and push of the new version of the application to the registry."
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 5,
+    "timestamp": "2026-05-04T03:12:07",
+    "root_cause": "The root cause is a misconfigured Docker container in the new version deployment, specifically the missing or incorrect configuration of the 'app-canary' container. This led to an error response from the daemon and resulted in the high latency and 100% error rate observed in the failing version.",
+    "recovery_steps": [
+      "Manually review and correct Docker container configuration for 'app-canary' in the new version deployment",
+      "Verify that the corrected configuration is applied to production environment",
+      "Monitor application performance and error rates closely until resolution"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 6,
+    "timestamp": "2026-05-04T03:16:03",
+    "root_cause": "The error response from daemon: No such container: app-canary indicates a misconfigured or non-existent Docker container. Further analysis reveals that the container was created with an incorrect image tag, causing the deployment to fail. The issue is likely due to a mismatch between the expected and actual Docker images used in the application.",
+    "recovery_steps": [
+      "Manually delete the non-existent container from Docker",
+      "Verify that the correct Docker image is being used for the application",
+      "Update the Docker configuration to ensure consistency across environments"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 7,
+    "timestamp": "2026-05-04T03:20:00",
+    "root_cause": "The error response from daemon: No such container: app-canary indicates a misconfigured Docker Compose file. The issue lies in the incorrect placement of the 'app-canary' service within the docker-compose.yml file, causing the container to not be created. This was exacerbated by the new version deployment which introduced a mismatch between the expected and actual environment variables.",
+    "recovery_steps": [
+      "Review Docker Compose file for correct placement of 'app-canary' service",
+      "Update environment variables to match expected values",
+      "Verify container creation and health using `docker ps -a` command"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 8,
+    "timestamp": "2026-05-04T03:23:57",
+    "root_cause": "The 'No such container: app-canary' error indicates a misconfigured or non-existent container in the Docker configuration. Further analysis revealed that the new version's container dependencies were not properly updated, causing the issue. The root cause is likely due to an incorrect update of the Docker Compose file.",
+    "recovery_steps": [
+      "Manually review and update the Docker Compose file to ensure correct container dependencies",
+      "Verify that all containers are properly configured and running before proceeding with further updates",
+      "Test the application thoroughly after updating the Docker configuration"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 9,
+    "timestamp": "2026-05-04T03:27:54",
+    "root_cause": "The error response from daemon: No such container: app-canary indicates a misconfigured Docker Compose file. The issue lies in the 'services' section where the 'app-canary' service is defined without specifying its image or ports. This resulted in the container not being created, causing the application to fail and leading to the observed error rate and latency increase.",
+    "recovery_steps": [
+      "Review Docker Compose file for 'app-canary' service configuration",
+      "Verify image and port specifications in 'app-canary' service definition",
+      "Apply fixes to Docker Compose file and redeploy the application"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 10,
+    "timestamp": "2026-05-04T03:31:52",
+    "root_cause": "The error response from daemon: No such container: app-canary indicates a misconfigured Docker Compose file. The issue is caused by a typo in the service name 'app-canary' which was not correctly referenced in the docker-compose.yml file. This resulted in the container not being created during deployment.",
+    "recovery_steps": [
+      "Review Docker Compose file for typos and correct service name references",
+      "Run docker-compose up -d --build to recreate the container with the corrected configuration",
+      "Verify that the new version is successfully deployed and functioning correctly"
+    ],
+    "prevent_recurrence": []
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "from_scenario": "S6",
+    "run_id": 1,
+    "timestamp": "2026-05-03T00:00:00",
+    "root_cause": "The canary deployment failed due to an incorrectly set container name in the docker-compose.yml file, leading to a container not found error. The issue was caused by a misconfiguration of the Docker networking, which resulted in the container being unable to resolve the hostname.",
+    "recovery_steps": [
+      "Roll back to the stable version container by stopping all canary deployments",
+      "Manually delete the incorrect container and restart the failed canary instance",
+      "Update the docker-compose.yml file with correct hostname resolution for canary containers"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 2,
+    "timestamp": "2026-05-03T00:05:02",
+    "root_cause": "The 'app-canary' container was not configured correctly in the Docker Compose file, causing the container to be created incorrectly. This misconfiguration led to a network isolation issue where the app-canary container could not be found by the daemon, resulting in the error.",
+    "recovery_steps": [
+      "Re-review and verify the Docker Compose file for correct app-canary container configuration, ensuring the correct network settings are applied.",
+      "Check the Docker network connectivity and ensure the app-canary container is properly reachable by verifying the correct IP address and port usage.",
+      "Run 'docker-compose up --force-recreate' to recreate the app-canary container and verify its status."
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 3,
+    "timestamp": "2026-05-03T00:09:52",
+    "root_cause": "Inconsistent Docker daemon configuration and incorrect naming convention in container image. The 'app-canary' image was not correctly uploaded to the registry due to a typo in the tag, causing it to be lost from the running containers list. Additionally, an inconsistent DNS resolution issue on one of the server hosts led to the container name mismatch.",
+    "recovery_steps": [
+      "Verify Docker daemon configuration and ensure correct container naming conventions are used",
+      "Run `docker inspect` command on each host server to verify running containers and correct DNS resolution issues",
+      "Update and re-run deployment scripts to fix inconsistencies in container image upload"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 4,
+    "timestamp": "2026-05-03T00:15:13",
+    "root_cause": "The failure was caused by a misconfigured Docker service that resulted in a missing container named 'app-canary'. The misconfiguration led to incorrect referencing of the new application version, causing a significant increase in error rate and latency. Further investigation revealed that the orchestrator's configuration had not been updated with the correct version number.",
+    "recovery_steps": [
+      "Immediately roll back to the stable version using Docker container pulling",
+      "Update orchestrator configuration with the correct version number",
+      "Verify that all containers are correctly referencing the new application version"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 5,
+    "timestamp": "2026-05-03T00:20:14",
+    "root_cause": "The root cause of this incident is a misconfigured canary deployment, specifically due to incorrect container naming (app-canary) in the Dockerfiles. This led to a failure in detecting and handling version inconsistencies. Furthermore, the new version was not properly checked for integrity before rollout.",
+    "recovery_steps": [
+      "Manually review and correct the Dockerfile for the canary deployment",
+      "Perform an automated check on the new version before deployment",
+      "Verify that all versions are properly checked for integrity"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 6,
+    "timestamp": "2026-05-03T00:25:15",
+    "root_cause": "The error 'No such container: app-canary' indicates that the new container image was not correctly named or was misconfigured. Further analysis reveals that the 'app-canary' is actually an alias for another service, and it seems that this other service is not running as expected due to a configuration issue in the Docker Compose file.",
+    "recovery_steps": [
+      "Re-check the Docker Compose file for any typos or configuration issues",
+      "Verify that all services are properly named and referenced in the 'app-canary' alias",
+      "Run a thorough test cycle to validate the stability of the new container image"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 7,
+    "timestamp": "2026-05-03T00:30:40",
+    "root_cause": "The error response from the daemon indicates that there is no such container 'app-canary' in the Docker configuration. This suggests a misconfiguration of the Docker containers or an incorrect application version being deployed. Additionally, the significant increase in errors and latency following the deployment of the new version may indicate that the changes broke a critical dependency or introduced a compatibility issue with other services.",
+    "recovery_steps": [
+      "Verify the Docker container configuration and logs to identify any discrepancies",
+      "Run 'docker-compose up' with verbose logging to ensure all containers are running correctly",
+      "Review the application version history to determine if any changes can be reverted or rolled back"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 8,
+    "timestamp": "2026-05-03T00:35:33",
+    "root_cause": "The 'app-canary' container was not properly registered with the Docker daemon due to a misconfigured environment variable, leading to incorrect DNS resolution of the service. This resulted in a failure to connect to the container, causing the high error rate and latency in the new version container.",
+    "recovery_steps": [
+      "Verify that environment variables for the 'app-canary' container are correctly set and updated in the deployment script",
+      "Check Docker logs for any errors or warnings related to the 'app-canary' container registration",
+      "Manually roll back the failed version of the application to the stable version to minimize user impact"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 9,
+    "timestamp": "2026-05-03T00:40:26",
+    "root_cause": "The app canary container was not deployed correctly, causing it to be absent from the docker daemon. This led to a chain reaction of errors in the failed version due to a lack of available containers.",
+    "recovery_steps": [
+      "Review and correct Docker deployment scripts",
+      "Verify container availability and health before deploying",
+      "Perform additional testing of the failed version in isolation"
+    ],
+    "prevent_recurrence": []
+  },
+  {
+    "from_scenario": "S6",
+    "run_id": 10,
+    "timestamp": "2026-05-03T00:45:18",
+    "root_cause": "The root cause of the issue is that the canary deployment was not properly created in the container registry, resulting in a 'No such container' error. This was likely due to a misconfigured rollout order or incorrect Docker image used in the build process.",
+    "recovery_steps": [
+      "Manually verify and correct container registry setup to ensure proper canary deployment configuration.",
+      "Rebuild the Docker image using the correct version and configure the build process for correct rollout order.",
+      "Initiate manual rollback of failed version to restore stable version."
+    ],
+    "prevent_recurrence": []
+  }
+]
