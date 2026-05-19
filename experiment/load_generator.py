@@ -7,7 +7,6 @@ STABLE_URL = "http://localhost:5000"
 CANARY_URL = "http://localhost:5001"
 
 def generate_load(url, count=100, results=None):
-    """Sends requests and collects metrics."""
     errors = 0
     latencies = []
     for _ in range(count):
@@ -33,16 +32,10 @@ def generate_load(url, count=100, results=None):
         results["total"] = count
 
 def measure_with_load(requests_count=100):
-    """
-    Sends real traffic through Nginx (80/20 split)
-    and measures stable/canary separately.
-    Returns metrics dict.
-    """
     nginx_results = {}
     stable_results = {}
     canary_results = {}
 
-    # Run all three in parallel
     threads = [
         threading.Thread(target=generate_load,
                         args=(NGINX_URL, requests_count, nginx_results)),
