@@ -189,12 +189,10 @@ def get_test_results_from_actions(run_id):
             if cov_match:
                 coverage = int(cov_match.group(1))
 
-            # Bandit security issues - mekle JSON formatā
             sec_json = re.findall(r'"issue_text":', full_text)
             if sec_json:
                 security_issues = len(sec_json)
             else:
-            # Mekle txt formatā
                 sec_issues = re.findall(r'>> Issue:', full_text)
                 security_issues = len(sec_issues)
 
