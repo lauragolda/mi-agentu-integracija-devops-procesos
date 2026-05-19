@@ -2,8 +2,6 @@ import pytest
 import requests
 import time
 
-# CI pipeline izpilda testus pret port 5002
-# Lokāli scenario_runner izmanto 5000/5001
 BASE_URL = "http://localhost:5002"
 
 def test_health_returns_200():
